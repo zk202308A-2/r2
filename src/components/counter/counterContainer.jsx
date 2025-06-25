@@ -5,7 +5,7 @@ function CountContainer() {
         <>
             <div>Count Container</div>
             <div className="m-3 p-3 bg-amber-400">
-                <CountDisplay></CountDisplay>
+                <CountDisplay value={10} name={'홍길동'}></CountDisplay>
             </div>
         </>
      );

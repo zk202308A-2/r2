@@ -1,9 +1,9 @@
 
+function CountDisplay({value, name}) {
 
-function CountDisplay() {
     return ( 
         <div className="text-6xl bg-blue-400 border-2">
-            COUNT 
+            COUNT {name} {value}
         </div>
      );
 }
