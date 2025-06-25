@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Counter from './components/counter'
 import CountContainer from './components/counter/counterContainer'
+import KioskContainer from './components/kiosk/kioskContainer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
       <CountContainer></CountContainer>
+      <KioskContainer></KioskContainer>
     </>
   )
 }
