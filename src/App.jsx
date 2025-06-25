@@ -12,6 +12,8 @@ function App() {
   return (
     <>
       <CountContainer></CountContainer>
+      <CountContainer></CountContainer>
+      <CountContainer></CountContainer>
       <KioskContainer></KioskContainer>
     </>
   )
