@@ -2,7 +2,8 @@ function MenuDisplay({arr}) {
     return (
         <>
             <ul>
-                {arr.map(m => <li>AAA</li>)}
+                {arr.map( ({mno, name, price}) => 
+                    <li key={mno}>{mno} - {name} - {price}</li>)}
             </ul>
         </>
       );
