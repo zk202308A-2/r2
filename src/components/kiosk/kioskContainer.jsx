@@ -32,7 +32,12 @@ function KioskContainer() {
       //item의 수량을 변경한다
       item.qty += amount 
       //상태가 변경되었다는 사실을 알려준다 setItems
+      if(item.qty <= 0){
+        setItems(items => items.filter(item => item.mno !== mno))
+        return
+      }
       setItems(state => [...items])
+      
     }
 
 
