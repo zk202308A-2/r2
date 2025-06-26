@@ -5,6 +5,7 @@ import './App.css'
 import Counter from './components/counter'
 import CountContainer from './components/counter/counterContainer'
 import KioskContainer from './components/kiosk/kioskContainer'
+import Count2Container from './components/counter2/counter2Conatiner'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,8 +13,8 @@ function App() {
   return (
     <>
       <CountContainer></CountContainer>
-      <CountContainer></CountContainer>
-      <CountContainer></CountContainer>
+      <Count2Container></Count2Container>
+      
       <KioskContainer></KioskContainer>
     </>
   )

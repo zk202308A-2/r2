@@ -2,6 +2,8 @@ import MenuDisplay from "./menuDisplay";
 
 function KioskContainer() {
 
+    
+
     const menus = [
         { mno: 1, name: '짜장면', price: 8000 },
         { mno: 2, name: '짬뽕', price: 9000 },
