@@ -1,8 +1,10 @@
 import { useState } from "react";
 
+const initState = {title:'', writer:''}
+
 function TodoInput() {
 
-    const [data,setData] = useState({title:'AAAA', writer:'user00'})
+    const [data,setData] = useState({...initState})
 
     const handleChange = (e) => {
         console.log("event: " , e)
@@ -15,7 +17,7 @@ function TodoInput() {
 
         //const newData  = {...data}
         //setData(() => newData)
-        
+
         setData(() => ({...data}))
     }
 
