@@ -18,7 +18,7 @@ function KioskContainer() {
       if (targetMenu) {
         // 3. 기존 items 배열에 targetMenu를 추가한 새로운 배열로 상태를 업데이트합니다.
         // 전개 구문(...)을 사용하여 불변성(immutability)을 유지합니다.
-        setItems(prevItems => [...prevItems, targetMenu]);
+        setItems(prevItems => [...prevItems, {...targetMenu, qty:1}]);
       }
     }
 
