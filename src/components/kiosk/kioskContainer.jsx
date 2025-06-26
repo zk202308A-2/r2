@@ -1,8 +1,16 @@
+import { useState } from "react";
+import CartComponent from "./cart";
 import MenuDisplay from "./menuDisplay";
 
 function KioskContainer() {
 
-    
+    const [items, setItems] = useState([])
+    const addCart = function (mno) {
+      //해당 menu를 찾아서 
+      //items에 추가 
+      console.log("addCart", mno)
+    }
+
 
     const menus = [
         { mno: 1, name: '짜장면', price: 8000 },
@@ -15,7 +23,8 @@ function KioskContainer() {
 
     return ( 
         <>
-          <MenuDisplay arr={menus}></MenuDisplay>
+          <MenuDisplay arr={menus} addCart={addCart}></MenuDisplay>
+          <CartComponent></CartComponent>
         </>
      );
 }
