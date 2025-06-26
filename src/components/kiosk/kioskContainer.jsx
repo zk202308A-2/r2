@@ -6,19 +6,22 @@ function KioskContainer() {
 
     const [items, setItems] = useState([])
     const addCart = function (mno) {
-      //mno에 해당하는 menu를 찾아서 
-      //items에 추가 
-      //상태 변경
-      console.log("addCart", mno)
 
-       // 1. mno에 해당하는 menu를 찾습니다.
+      console.log("addCart", mno)
       const targetMenu = menus.find(menu => menu.mno === mno);
 
-      // 2. 해당 메뉴가 존재하는 경우에만 items에 추가합니다.
       if (targetMenu) {
-        // 3. 기존 items 배열에 targetMenu를 추가한 새로운 배열로 상태를 업데이트합니다.
-        // 전개 구문(...)을 사용하여 불변성(immutability)을 유지합니다.
-        setItems(prevItems => [...prevItems, {...targetMenu, qty:1}]);
+        //items안에 mno값의 itemd이 존재하는지 확인
+        const oldItem = items.find(item => item.mno === mno)
+        //있다면 qty만 1 증가 시키고 상태변경 
+        if(oldItem){
+          oldItem.qty += 1
+          setItems(() => [...items])
+        }else {
+          //없다면 items에 qty속성 추가
+          setItems(prevItems => [...prevItems, {...targetMenu, qty:1}]);
+        }
+        
       }
     }
 
