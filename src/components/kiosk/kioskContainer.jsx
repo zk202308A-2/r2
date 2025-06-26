@@ -35,7 +35,7 @@ function KioskContainer() {
     return ( 
         <>
           <MenuDisplay arr={menus} addCart={addCart}></MenuDisplay>
-          <CartComponent></CartComponent>
+          <CartComponent items={items}></CartComponent>
         </>
      );
 }
