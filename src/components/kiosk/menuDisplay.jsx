@@ -7,6 +7,7 @@ function MenuDisplay({ arr, addCart }) {
             <li
             key={mno}
             className="bg-white rounded-lg shadow-md p-4 mb-4 flex justify-between items-center"
+            onClick={() =>{  addCart(mno) }}
             >
             <div className="font-bold text-lg">{name}</div>
             <div className="text-gray-700">No. {mno}</div>
