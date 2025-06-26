@@ -27,6 +27,12 @@ function KioskContainer() {
 
     const changeQty = (mno, amount) => {
       console.log("changeQty", mno, amount)
+      //items안에 mno에 해당하는 item을 찾는다 
+      const item = items.find(i => i.mno === mno)
+      //item의 수량을 변경한다
+      item.qty += amount 
+      //상태가 변경되었다는 사실을 알려준다 setItems
+      setItems(state => [...items])
     }
 
 
