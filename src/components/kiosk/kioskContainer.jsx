@@ -25,6 +25,10 @@ function KioskContainer() {
       }
     }
 
+    const changeQty = (mno, amount) => {
+      console.log("changeQty", mno, amount)
+    }
+
 
     const menus = [
         { mno: 1, name: '짜장면', price: 8000 },
@@ -38,7 +42,7 @@ function KioskContainer() {
     return ( 
         <>
           <MenuDisplay arr={menus} addCart={addCart}></MenuDisplay>
-          <CartComponent items={items}></CartComponent>
+          <CartComponent items={items} changeQty={changeQty}></CartComponent>
         </>
      );
 }
