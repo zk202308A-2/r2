@@ -3,7 +3,9 @@ function CartComponent({items, changeQty}) {
         <div>
             <div>Cart Component</div>
             <ul>
-                {items.map(item => <li>AAA</li>)}
+                {items.map( ({mno,name,price,qty}) => 
+                <li key={mno}>{name} - {price} - {qty} </li>
+                )}
             </ul>
         </div>
      );
